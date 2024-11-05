@@ -1,12 +1,12 @@
 
-- name: install nginx
+- name: Install nginx on all hosts
   hosts: all
   become: yes
-  roles:
-    - name: install nginx
-      yum: 
-         name: nginx
-         state: present
-         
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
 
 
