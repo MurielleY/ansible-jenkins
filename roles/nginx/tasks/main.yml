@@ -1,9 +1,9 @@
 ---
 - name: install nginx
-  ansible.builtin.dnf:
+  dnf:
     name: nginx
     state: present
-    update_cache: true 
+    update_cache: true
   become: yes
 
 - name: start nginx
@@ -16,4 +16,3 @@
   template:
     src: index.html.j2
     dest: /usr/share/nginx/html/index.html
-
