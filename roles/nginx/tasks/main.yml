@@ -2,7 +2,7 @@
   ansible.builtin.dnf:
     name: nginx
     state: present
-    cache_valid_time: 3600  # <-- Supprimez cette ligne
+    update_cache: true 
   become: yes
 
 - name: start nginx
