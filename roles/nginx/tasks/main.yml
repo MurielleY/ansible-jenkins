@@ -1,10 +1,8 @@
 - name: install nginx
-  yum: 
-    name:
-      - nginx
+  ansible.builtin.dnf:
+    name: nginx
     state: present
-    update_cache: yes
-    cache_valid_time: 3600
+    cache_valid_time: 3600  # <-- Supprimez cette ligne
   become: yes
 
 - name: start nginx
